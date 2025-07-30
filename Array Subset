@@ -1,0 +1,14 @@
+Array Subset
+https://www.geeksforgeeks.org/problems/array-subset-of-another-array2317/1
+
+from collections import Counter
+
+class Solution:
+    def isSubset(self, a, b):
+        freq_a = Counter(a)
+        freq_b = Counter(b)
+
+        for num in freq_b:
+            if freq_b[num] > freq_a.get(num, 0):
+                return False
+        return True
