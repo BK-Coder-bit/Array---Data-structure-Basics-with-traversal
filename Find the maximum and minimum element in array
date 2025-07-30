@@ -1,0 +1,17 @@
+https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
+
+#User function Template for python3
+#User function Template for python3
+
+class Solution:
+    def get_min_max(self, arr):
+        minimum = maximum = arr[0]
+
+    # Traverse the array
+        for num in arr[1:]:
+            if num < minimum:
+                minimum = num
+            elif num > maximum:
+                maximum = num
+
+        return (minimum, maximum)
