@@ -1,0 +1,9 @@
+https://www.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
+
+class Solution:
+    def rotate(self, arr):
+        n = len(arr)
+        last = arr[-1]  # Store last element
+        for i in range(n-1, 0, -1):
+            arr[i] = arr[i-1]
+        arr[0] = last
