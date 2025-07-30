@@ -1,0 +1,12 @@
+https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
+
+class Solution:
+    # Function to sort an array of 0s, 1s, and 2s
+    def sort012(self, nums):
+        counts=[0,0,0]
+        for c in nums:
+            counts[c]+=1
+        r,w,b=counts
+        nums[:r]=[0]*r
+        nums[r:r+w]=[1]*w
+        nums[r+w:]=[2]*b
